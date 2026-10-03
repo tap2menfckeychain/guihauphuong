@@ -3,7 +3,7 @@
 const CONFIG = {
 
     // Tên người yêu. Để "" thì trang sẽ gọi là "em".
-    tenEm: "Yêu của anh",
+    tenEm: "",
 
     // Chữ ký cuối lá thư.
     chuKy: "Chàng học viên của em",
