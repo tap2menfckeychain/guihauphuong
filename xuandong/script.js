@@ -71,7 +71,7 @@ if (CONFIG.tenEm) {
     document
         .querySelectorAll(".js-greeting")
         .forEach(function (el) {
-            el.textContent = CONFIG.tenEm + " yêu của anh,";
+            el.textContent = CONFIG.tenEm + ",";
         });
 }
 
