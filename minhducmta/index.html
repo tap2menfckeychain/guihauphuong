@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#07100b">
+    <title>Anh Yêu Em Bằng Con Tim Người Lính</title>
+    <meta name="description" content="Lá thư của một học viên Học viện Kỹ thuật Quân sự gửi người con gái anh thương.">
+
+    <link rel="preload" href="../fonts/utm-zirkon.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body class="is-locked">
+
+<!-- ================= MỞ THƯ (INTRO) ================= -->
+
+<div class="intro" id="intro">
+
+    <canvas class="stars" data-stars="140"></canvas>
+
+    <div class="intro-inner">
+
+        <p class="intro-kicker">★ THƯ TỪ HỌC VIỆN ★</p>
+
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-letter">
+                <span>Gửi em,</span>
+                <small>từ chàng học viên của em</small>
+            </div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-seal">★</div>
+        </div>
+
+        <h1 class="intro-title">
+            Có một lá thư<br>
+            <em>gửi <span class="js-her-name">em</span>.</em>
+        </h1>
+
+        <p class="intro-text">
+            Từ một chàng học viên quân đội vừa xong giờ tự học,
+            đang nhớ em nhiều hơn mọi công thức.
+        </p>
+
+        <button class="intro-button" id="openLetter" type="button">
+            <span>Mở thư</span>
+            <i>♥</i>
+        </button>
+
+        <p class="intro-hint">♫ Bật âm thanh — anh có gửi kèm một bài hát</p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar" id="navbar">
+
+    <a href="#top" class="logo">
+        <span class="logo-star">★</span>
+        GỬI EM <small>·</small> TỪ HỌC VIỆN
+    </a>
+
+    <nav>
+        <a href="#story">Nỗi nhớ</a>
+        <a href="#diary">Nhật ký</a>
+        <a href="#letter">Lá thư</a>
+        <a href="#promise">Lời hứa</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="top">
+
+    <canvas class="stars" data-stars="220" data-shooting="true"></canvas>
+
+    <div class="hero-moon"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-small reveal-hero">
+            <span class="line"></span>
+            THƯ CỦA MỘT HỌC VIÊN QUÂN ĐỘI · GỬI NGƯỜI ANH THƯƠNG
+        </p>
+
+        <h1 class="hero-title">
+            <span class="reveal-hero">Anh yêu em</span>
+            <span class="reveal-hero">bằng con tim</span>
+            <span class="reveal-hero"><em>người lính.</em></span>
+        </h1>
+
+        <p class="hero-quote reveal-hero">
+            Tình trong ngực, <b>và đất nước ở trong tim.</b>
+        </p>
+
+        <div class="hero-actions reveal-hero">
+
+            <a href="#story" class="hero-button">
+                ĐỌC TIẾP CÂU CHUYỆN
+                <span>↓</span>
+            </a>
+
+            <div class="hero-days">
+                <strong class="js-days">∞</strong>
+                <span>ngày anh khoác<br>áo học viên</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Núi & lá cờ trên đỉnh -->
+    <div class="hero-mountains">
+
+        <svg class="mountain m-back" data-depth=".32" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 230 L120 170 L230 210 L360 120 L480 190 L600 140 L720 200 L860 90 L1000 180 L1120 130 L1260 190 L1440 140 L1440 320 L0 320 Z" />
+        </svg>
+
+        <svg class="mountain m-mid" data-depth=".18" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 260 L160 200 L300 250 L440 180 L560 230 L700 170 L820 220 L980 150 L1080 200 L1220 160 L1340 220 L1440 190 L1440 320 L0 320 Z" />
+        </svg>
+
+        <div class="flag-post" data-depth=".18" aria-hidden="true">
+            <div class="flag"><span>★</span></div>
+            <div class="pole"></div>
+        </div>
+
+        <svg class="mountain m-front" data-depth=".06" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 290 L200 250 L340 280 L520 230 L640 265 L780 215 L900 260 L1060 240 L1200 275 L1320 245 L1440 270 L1440 320 L0 320 Z" />
+        </svg>
+
+    </div>
+
+    <div class="hero-scroll">
+        CUỘN XUỐNG
+        <div></div>
+    </div>
+
+</section>
+
+
+<!-- ================= 01 · NỖI NHỚ ================= -->
+
+<section class="story section" id="story">
+
+    <div class="section-number" data-reveal>
+        01 <span>TỪ HỌC VIỆN KỸ THUẬT QUÂN SỰ</span>
+    </div>
+
+    <div class="story-grid">
+
+        <div class="story-title" data-reveal>
+
+            <p class="quote">“</p>
+
+            <h2>
+                Đêm ở học viện,<br>
+                sao nhiều lắm.<br>
+                <em>Nhưng anh chỉ tìm một ngôi sao — là em.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="story-text" data-reveal>
+
+            <p>
+                Giờ tự học vừa hết. Cả dãy nhà học viên chỉ còn tiếng quạt trần
+                và tiếng lật trang giáo trình. Anh gấp sách lại, nhìn ra khoảng sân
+                tối ngoài cửa sổ, và nghĩ đến em.
+            </p>
+
+            <p>
+                Ở đây, ngày nào cũng kín lịch: sáng giảng đường, chiều thao trường,
+                tối lại vùi đầu vào bài vở. Người ta bảo học viên quân đội phải nghiêm,
+                phải giỏi. Anh vẫn đang cố từng ngày — chỉ là mỗi khi nghĩ đến em,
+                trái tim anh lại mềm đi một chút.
+            </p>
+
+            <p>
+                Có những điều anh không nói kịp trong những cuộc gọi cuối tuần ngắn ngủi.
+                Nên anh viết ra đây, để em đọc bao nhiêu lần cũng được.
+            </p>
+
+            <p class="highlight">
+                Hôm nay anh học để mai này làm người sĩ quan giữ bình yên cho đất nước —
+                <strong>cũng là giữ bình yên cho em.</strong>
+            </p>
+
+            <div class="story-stats">
+
+                <div>
+                    <strong class="js-days">∞</strong>
+                    <span>NGÀY Ở HỌC VIỆN</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>LẦN NHỚ EM</span>
+                </div>
+
+                <div class="js-countdown-box">
+                    <strong class="js-countdown">01</strong>
+                    <span class="js-countdown-label">LỜI HẸN NGÀY RA TRƯỜNG</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HAI NƠI · MỘT LÒNG ================= -->
+
+<section class="worlds">
+
+    <div class="world cadet" data-reveal>
+
+        <div class="world-number">Nơi anh</div>
+
+        <div class="world-content">
+            <span>GIẢNG ĐƯỜNG · THAO TRƯỜNG</span>
+            <h2>Quân trường</h2>
+            <p>
+                Sáng giảng đường, chiều thao trường, tối miệt mài bên trang vở.
+                Anh học để mai này khoác lên vai quân hàm sĩ quan.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="worlds-heart" aria-hidden="true">
+        <span>♥</span>
+        <small>CÙNG MỘT BẦU TRỜI</small>
+    </div>
+
+
+    <div class="world home" data-reveal>
+
+        <div class="world-number">Nơi em</div>
+
+        <div class="world-content">
+            <span>Ô CỬA SÁNG ĐÈN · HẬU PHƯƠNG</span>
+            <h2>Hậu phương</h2>
+            <p>
+                Có một ô cửa sổ còn sáng đèn, có một người con gái hay thức khuya
+                chờ tin nhắn cuối tuần. Đó là nơi anh muốn trở về nhất.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HAI NHỊP ĐẬP ================= -->
+
+<section class="heartbeat" id="heartbeat">
+
+    <div class="heartbeat-sticky">
+
+        <div class="section-number light">
+            ♥ <span>HAI NHỊP ĐẬP</span>
+        </div>
+
+        <p class="heartbeat-text" id="heartbeatText">
+            Trái tim người lính trẻ trong màu áo học viên có hai nhịp đập.
+            Một nhịp cho <em>Tổ quốc</em> thiêng liêng.
+            Một nhịp cho <em>em</em> — người con gái anh thương.
+            Anh chưa bao giờ phải chọn,
+            vì cả hai đều nằm <em>bên trái lồng ngực.</em>
+        </p>
+
+        <div class="pulse-line" aria-hidden="true">
+            <svg viewBox="0 0 600 60" preserveAspectRatio="none">
+                <path pathLength="1000" d="M0 30 H210 L228 30 L242 6 L258 54 L274 16 L286 30 H600" />
+            </svg>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 02 · NHẬT KÝ ================= -->
+
+<section class="diary section" id="diary">
+
+    <div class="section-number" data-reveal>
+        02 <span>NHẬT KÝ HỌC VIÊN</span>
+    </div>
+
+    <div class="diary-title" data-reveal>
+        <h2>
+            Từ ngày <em>nhập học</em><br>
+            đến ngày <em>ra trường.</em>
+        </h2>
+    </div>
+
+
+    <div class="diary-list">
+
+        <div class="diary-line"><div class="diary-line-fill" id="diaryFill"></div></div>
+
+        <article class="diary-item" data-reveal>
+            <div class="diary-dot">★</div>
+            <div class="diary-card">
+                <span>TRANG 01 · NGÀY NHẬP HỌC</span>
+                <h3>Em tiễn anh ở cổng học viện</h3>
+                <p>
+                    Bộ quân phục mới còn nguyên nếp gấp. Em cười bảo anh trông “ra dáng” lắm,
+                    mà mắt đỏ hoe. Anh gật đầu thật mạnh, không dám nói nhiều —
+                    sợ nói thêm một câu là anh không bước vào nổi.
+                </p>
+            </div>
+        </article>
+
+        <article class="diary-item" data-reveal>
+            <div class="diary-dot">★</div>
+            <div class="diary-card">
+                <span>TRANG 02 · NHỮNG NGÀY HUẤN LUYỆN ĐẦU</span>
+                <h3>Gấp chăn vuông, đi đều bước</h3>
+                <p>
+                    Học điều lệnh, gấp chăn màn cho thật vuông, tập đi đều dưới nắng.
+                    Mệt lắm, nhưng tối nào nằm xuống anh cũng nghĩ:
+                    mình đang lớn lên từng ngày, để xứng đáng với em.
+                </p>
+            </div>
+        </article>
+
+        <article class="diary-item" data-reveal>
+            <div class="diary-dot">★</div>
+            <div class="diary-card">
+                <span>TRANG 03 · TRÊN GIẢNG ĐƯỜNG</span>
+                <h3>Những công thức và một cái tên</h3>
+                <p>
+                    Có những đêm ôn thi, giữa bao nhiêu công thức và bản vẽ kỹ thuật,
+                    anh vẫn lén viết tên em ở góc vở. Em là bài toán duy nhất
+                    anh không muốn giải xong.
+                </p>
+            </div>
+        </article>
+
+        <article class="diary-item" data-reveal>
+            <div class="diary-dot">★</div>
+            <div class="diary-card">
+                <span>TRANG 04 · NHỮNG NGÀY CUỐI TUẦN</span>
+                <h3>Một cuộc gọi, một buổi hẹn vội</h3>
+                <p>
+                    Những cuộc gọi ngắn, những buổi gặp vội vàng rồi lại phải về đúng giờ.
+                    Ít thôi, nhưng đủ để anh có sức học tiếp cả một tuần dài.
+                </p>
+            </div>
+        </article>
+
+        <article class="diary-item future" data-reveal>
+            <div class="diary-dot">♥</div>
+            <div class="diary-card">
+                <span>TRANG CUỐI · SẮP TỚI</span>
+                <h3>Ngày anh ra trường</h3>
+                <p>
+                    Ngày ấy anh sẽ đeo quân hàm sĩ quan, và người đầu tiên anh muốn tìm
+                    thấy giữa hội trường là em. Chờ anh nhé — chặng đường này,
+                    mình cùng nhau đi hết.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 03 · LÁ THƯ ================= -->
+
+<section class="letter section" id="letter">
+
+    <div class="section-number light" data-reveal>
+        03 <span>LÁ THƯ VIẾT SAU GIỜ TỰ HỌC</span>
+    </div>
+
+
+    <div class="letter-wrapper">
+
+        <div class="letter-paper" data-reveal>
+
+            <div class="stamp">
+                <b>★</b>
+                <small>QUÂN BƯU</small>
+            </div>
+
+            <div class="postmark">
+                <span>HỌC VIỆN<br>KTQS</span>
+            </div>
+
+            <p class="letter-date">Học viện, một tối sau giờ tự học</p>
+
+            <h2 class="letter-greeting">
+                <span class="js-greeting">Em yêu của anh,</span>
+            </h2>
+
+
+            <div class="letter-content">
+
+                <p>
+                    Lúc anh viết những dòng này, cả phòng đã tắt đèn. Anh vừa xong giờ tự học,
+                    đầu vẫn còn đầy những công thức — vậy mà người anh nhớ nhất vẫn là em.
+                </p>
+
+                <p>
+                    Anh biết yêu một học viên quân đội là thiệt thòi. Những ngày lễ em đi một mình,
+                    những lúc em ốm anh không ở bên, những tin nhắn em gửi đi rồi phải đợi
+                    đến cuối tuần mới có hồi âm. Anh thương em vì tất cả những điều đó.
+                </p>
+
+                <p>
+                    Nhưng em ơi, mỗi giờ anh ngồi trên giảng đường, mỗi buổi anh rèn luyện trên
+                    thao trường, anh đều nghĩ: mình đang chuẩn bị để mai này trở thành người sĩ quan
+                    giữ bình yên cho đất nước — và trong đất nước ấy có em. Vậy nên anh chưa bao giờ
+                    thấy những vất vả này là vô nghĩa.
+                </p>
+
+                <blockquote class="letter-quote">
+                    Anh yêu em bằng con tim người lính —
+                    tình trong ngực, và đất nước ở trong tim.
+                </blockquote>
+
+                <p>
+                    Em cứ sống thật vui, thật khỏe, đừng lo cho anh nhiều. Anh vẫn học tốt,
+                    vẫn khỏe, và vẫn đang đếm từng ngày đến lúc được ra trường,
+                    đứng trước mặt em trong bộ quân phục sĩ quan.
+                </p>
+
+                <div class="signature">
+                    <span>Thương em thật nhiều,</span>
+                    <strong class="js-his-name">Chàng học viên của em</strong>
+                    <i>★</i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 04 · KỶ NIỆM ================= -->
+
+<section class="memory section" id="memory">
+
+    <div class="section-number" data-reveal>
+        04 <span>KẸP TRONG CUỐN GIÁO TRÌNH</span>
+    </div>
+
+
+    <div class="memory-heading" data-reveal>
+
+        <h2>
+            Những điều<br>
+            <em>anh giữ bên mình.</em>
+        </h2>
+
+        <p>
+            Giữa sách vở, quân trang và lịch học kín mít,
+            vẫn có một góc nhỏ anh để dành riêng cho em.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <figure class="polaroid" data-reveal>
+            <div class="polaroid-photo">
+                <img src="a1-4db2.jpg" alt="Nụ cười của em">
+                <div class="polaroid-empty"><span>♥</span><small>KỶ NIỆM 01</small></div>
+            </div>
+            <figcaption>Nụ cười của em</figcaption>
+        </figure>
+
+        <figure class="polaroid" data-reveal>
+            <div class="polaroid-photo">
+                <img src="a2-sk77.jpg" alt="Ngày em tiễn anh nhập học">
+                <div class="polaroid-empty"><span>★</span><small>KỶ NIỆM 02</small></div>
+            </div>
+            <figcaption>Ngày anh nhập học</figcaption>
+        </figure>
+
+        <figure class="polaroid" data-reveal>
+            <div class="polaroid-photo">
+                <img src="a3-ekve.jpg" alt="Tấm ảnh kẹp trong vở">
+                <div class="polaroid-empty"><span>♥</span><small>KỶ NIỆM 03</small></div>
+            </div>
+            <figcaption>Ảnh kẹp trong vở</figcaption>
+        </figure>
+
+        <figure class="polaroid" data-reveal>
+            <div class="polaroid-photo">
+                <img src="a4-52hy.jpg" alt="Hẹn ngày ra trường">
+                <div class="polaroid-empty"><span>★</span><small>KỶ NIỆM 04</small></div>
+            </div>
+            <figcaption>Hẹn ngày ra trường</figcaption>
+        </figure>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 05 · LỜI HỨA ================= -->
+
+<section class="promise section" id="promise">
+
+    <div class="section-number" data-reveal>
+        05 <span>LỜI HỨA CỦA CHÀNG HỌC VIÊN</span>
+    </div>
+
+    <div class="promise-heading" data-reveal>
+        <h2>Anh hứa với em <em>bốn điều.</em></h2>
+        <p>Chạm vào từng tấm thẻ để mở lời hứa.</p>
+    </div>
+
+
+    <div class="promise-grid">
+
+        <button class="promise-card" type="button" data-reveal>
+            <div class="promise-inner">
+                <div class="promise-front">
+                    <b>01</b>
+                    <span>★</span>
+                    <small>LỜI HỨA</small>
+                </div>
+                <div class="promise-back">
+                    <p>Anh sẽ giữ gìn sức khỏe — để em không phải lo.</p>
+                </div>
+            </div>
+        </button>
+
+        <button class="promise-card" type="button" data-reveal>
+            <div class="promise-inner">
+                <div class="promise-front">
+                    <b>02</b>
+                    <span>★</span>
+                    <small>LỜI HỨA</small>
+                </div>
+                <div class="promise-back">
+                    <p>Anh sẽ học thật giỏi, rèn luyện thật tốt — để em tự hào về anh.</p>
+                </div>
+            </div>
+        </button>
+
+        <button class="promise-card" type="button" data-reveal>
+            <div class="promise-inner">
+                <div class="promise-front">
+                    <b>03</b>
+                    <span>★</span>
+                    <small>LỜI HỨA</small>
+                </div>
+                <div class="promise-back">
+                    <p>Cuối tuần nào được cầm điện thoại, người đầu tiên anh gọi là em.</p>
+                </div>
+            </div>
+        </button>
+
+        <button class="promise-card" type="button" data-reveal>
+            <div class="promise-inner">
+                <div class="promise-front">
+                    <b>04</b>
+                    <span>♥</span>
+                    <small>LỜI HỨA</small>
+                </div>
+                <div class="promise-back">
+                    <p>Ngày anh ra trường, người anh muốn thấy đầu tiên là em.</p>
+                </div>
+            </div>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL ================= -->
+
+<section class="final" id="final">
+
+    <canvas class="stars" data-stars="160" data-shooting="true"></canvas>
+
+    <div class="final-content">
+
+        <p class="final-kicker" data-reveal>VÀ RỒI, EM ƠI...</p>
+
+        <h2 data-reveal>
+            Chờ ngày anh<br>
+            <em>ra trường,</em> <em>em nhé.</em>
+        </h2>
+
+        <p class="final-quote" data-reveal>
+            “Anh yêu em bằng con tim người lính,<br>
+            tình trong ngực và đất nước ở trong tim.”
+        </p>
+
+        <button class="hug-button" id="hugButton" type="button" data-reveal>
+            <span class="hug-heart">♥</span>
+            <span class="hug-label">Gửi anh một cái ôm</span>
+        </button>
+
+        <p class="hug-count" id="hugCount"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <div>★ ANH YÊU EM BẰNG CON TIM NGƯỜI LÍNH</div>
+    <div>NHẠC: TỰ HÀO MÀU ÁO LÍNH — THÁI HỌC × LONG HỌ HUỲNH</div>
+</footer>
+
+
+<!-- ================= MÁY PHÁT NHẠC ================= -->
+
+<div class="player" id="player">
+
+    <button class="player-disc" id="playerToggle" type="button" aria-label="Bật / tắt nhạc">
+        <span class="disc"><b>★</b></span>
+        <span class="player-icon" id="playerIcon">▶</span>
+    </button>
+
+    <div class="player-info">
+        <strong>Tự Hào Màu Áo Lính</strong>
+        <span>Thái Học × Long Họ Huỳnh</span>
+    </div>
+
+    <div class="player-bars" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+    </div>
+
+</div>
+
+<audio id="backgroundMusic" loop preload="auto" playsinline>
+    <source src="../music/tu-hao-mau-ao-linh.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================= XEM ẢNH ================= -->
+
+<div class="lightbox" id="lightbox">
+    <img src="" alt="">
+    <button type="button" aria-label="Đóng">×</button>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
